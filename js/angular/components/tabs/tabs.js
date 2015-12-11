@@ -89,6 +89,7 @@
     function link(scope, element, attrs, controller) {
       scope.id = attrs.id || foundationApi.generateUuid();
       scope.showTabContent = scope.displaced !== 'true';
+      scope.vertical = attrs.vertical !== undefined
       attrs.$set('id', scope.id);
       controller.setId(scope.id);
 
